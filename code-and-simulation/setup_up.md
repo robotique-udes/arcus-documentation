@@ -3,7 +3,7 @@
 
 ***IMPORTANT: THIS DOCUMENTATION IS A WORK IN PROGRESS. IF YOU SEE ANY ERRORS, UNCLEAR STEPS OR OUTDATED INFO, PLEASE NOTICE US OR UPDATE IT***
 
-Before you start setting up, it's important that your **UBUNTU 20.04** set up is done.
+Before you start setting up, it's important that your **UBUNTU 22.04** set up is done.
  
 First of all, it is important to note that we do **virtual AND real-life racing**. Therefore, distinct setup-up are needed for each and you might want to only set-up the environment that you're going to work with.
 They are **4 main repositories** being used in the project. One is for virtual racing : *Autodrive_roboracer_ws*. The three other are used for real-life racing: *sim_ws*, *ARCUS* and *VESC*.
