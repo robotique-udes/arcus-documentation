@@ -25,14 +25,10 @@ The ARCUS repo, that you can find in the **Robotiques_udes github**, is the team
 ```bash
 cd ~
 ```
-- Clone the **ARCUS** repo:
+- Clone the **arcus** repo (**you'll need the SSH set up**):
 ```bash 
-git clone https://github.com/Gabduf/ARCUS_ros_pkg_example.git
+git clone git@github.com:robotique-udes/arcus.git
 ```
-**!!! Les repos sont pas encore split comme on veut dans le github de robotiqueUdes donc en attendant, je propose de juste cloner un exemple de ROS2 package pour vite voir si ça marche. Mais keep in mind que à la place de ça, ça va être le ARCUS folder qui va contenir toutes nos ROS2 package... 
-<u>
-Pour que ça marche avec les dockers plus tard, renommer le folder ARCUS après l'avoir clôner !!!**
-</u>
 
 ## 2.3 Setting up the sim_ws
 Now that you have our ROS2 codebase on your host machine, you'll need the simulation workspace, allowing you to quickly test you're code in the f1tenth_gym, a custom tools built for f1tenth (now roboracer), on top of RViz.
@@ -40,11 +36,10 @@ Now that you have our ROS2 codebase on your host machine, you'll need the simula
 ```bash
 cd ~
 ```
-- Clone the **sim_ws** repo:
+- Clone the **arcus-simulation** repo (**you'll need the SSH set up**):
 ```bash 
-git clone https://github.com/Gabduf/sim_ws.git
+git clone git@github.com:robotique-udes/arcus-simulation.git
 ```
-**!!! Encore une fois, là ça pointe à mon github en attendant, mais dans le futur ça va être dans le github de RobotiqueUdes.**
 
 - Notice what's in sim_ws:
 ```
@@ -70,8 +65,9 @@ gedit ~/.bashrc
 - At the top of the file, copy:
 ```
 # Additions
-alias arcus-build='xhost +local:docker && cd ~/sim_ws && docker-compose build'
-alias arcus-up='cd ~/sim_ws && docker-compose up -d'
+alias arcus-build='xhost +local:docker && cd ~/arcus-simulation/sim_ws && docker-compose build'
+alias arcus-up='cd ~/arcus-simulation/sim_ws && docker-compose up -d'
+alias arcus-down='cd ~/arcus-simulation/sim_ws && docker-compose down'
 alias arcus-bash='docker exec -it arcus bash'
 alias arcus-nuke='docker system prune -a --volumes'
 alias arcus-space='docker system df'
@@ -91,11 +87,12 @@ b() {
 - Here's an important overview of what each macros and function mean:
 1. *arcus-build* : this command will build the *arcus* docker container.
 2. *arcus-up* : this command starts the *arcus* docker.
-3. *arcus-bash* : this command allows you to start a bash session in the docker container. In other words, the docker container is isolated from your host machine. Therefore, you can't access or do anything in the container from your host terminal... You need to open the docker's terminal, with arcus-bahs.
-4. *arcus-space* : this will give you a summary of the space being taken on your host machine by the docker images.
-5. *arcus-nuke* : this command destroys every docker image. It can be pretty useful if you have plenty of docker images on your host machine taking a lot of space (check using arcus-space)
-6. *arcus-list* : this command will give you the list of the dockers running on your host machine.
-7. b : this function handles the building of all the ROS2 packages using *colcon build*. **IMPORTANT: You can run it from anywhere on your HOST terminal. Meaning you can't use the 'b' command from a docker bash session. The function handles it by going in the docker itself.**
+3. *arcus-down* : this command stops the *arcus* docker.
+4. *arcus-bash* : this command allows you to start a bash session in the docker container. In other words, the docker container is isolated from your host machine. Therefore, you can't access or do anything in the container from your host terminal... You need to open the docker's terminal, with arcus-bahs.
+5. *arcus-space* : this will give you a summary of the space being taken on your host machine by the docker images.
+6. *arcus-nuke* : this command destroys every docker image. It can be pretty useful if you have plenty of docker images on your host machine taking a lot of space (check using arcus-space)
+7. *arcus-list* : this command will give you the list of the dockers running on your host machine.
+8. b : this function handles the building of all the ROS2 packages using *colcon build*. **IMPORTANT: You can run it from anywhere on your HOST terminal. Meaning you can't use the 'b' command from a docker bash session. The function handles it by going in the docker itself.**
 
 ## 2.3 Building and running the docker
  First, you'll need to install docker and related packages: 
@@ -120,7 +117,7 @@ groups
 You should see docker in the groups !
 - Give permission to the entrypoint.sh script:
 ```bash
-chmod +x ~/sim_ws/src/scripts/entrypoint.sh
+chmod +x ~arcus-simulation/sim_ws/src/scripts/entrypoint.sh
 ```
 - Build the docker container:
 ```bash
