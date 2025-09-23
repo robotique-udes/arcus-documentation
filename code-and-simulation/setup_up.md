@@ -88,7 +88,7 @@ b() {
 1. *arcus-build* : this command will build the *arcus* docker container.
 2. *arcus-up* : this command starts the *arcus* docker.
 3. *arcus-down* : this command stops the *arcus* docker.
-4. *arcus-bash* : this command allows you to start a bash session in the docker container. In other words, the docker container is isolated from your host machine. Therefore, you can't access or do anything in the container from your host terminal... You need to open the docker's terminal, with arcus-bahs.
+4. *arcus-bash* : this command allows you to start a bash session in the docker container. In other words, the docker container is isolated from your host machine. Therefore, you can't access or do anything in the container from your host terminal... You need to open the docker's terminal, with arcus-bash.
 5. *arcus-space* : this will give you a summary of the space being taken on your host machine by the docker images.
 6. *arcus-nuke* : this command destroys every docker image. It can be pretty useful if you have plenty of docker images on your host machine taking a lot of space (check using arcus-space)
 7. *arcus-list* : this command will give you the list of the dockers running on your host machine.
