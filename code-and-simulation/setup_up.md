@@ -36,7 +36,7 @@ Now that you have our ROS2 codebase on your host machine, you'll need the simula
 ```bash
 cd ~
 ```
-- Clone the **arcus-simulation** repo (**you'll need the SSH set up**):
+- Clone the **arcus-simulation** repo (**you'll need to setup an [SSH-key](https://github.com/Zach3292/NotesDeCours/blob/main/Connaissance%20autre/Github/Tutoriel%20Github-Git.md#synchronisation-avec-github)**:
 ```bash 
 git clone git@github.com:robotique-udes/arcus-simulation.git
 ```
