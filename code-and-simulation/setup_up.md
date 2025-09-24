@@ -165,7 +165,7 @@ ros2 launch f1tenth_gym_ros gym_bridge_launch.py
 ```
 - Launch the *gap_follower* package:
 ```bash
-ros2 run gap_follow reactive_node
+ros2 run gap_follow gap_follow
 ```
 You should now see the car in the simulation moving around the track, using the *follow the gap* algorithm !
 
