@@ -178,3 +178,26 @@ We are going to develop full-time INSIDE the docker container. Therefore, we nee
 - You should then be asked to select the folder you want to open. Navigate to open */sim_ws/src*/ARCUS  
 
 You should be in ! You can now edit the code and develop, and should see all the ROS2 packages. Keep in mind that because the *sim_ws* and *ARCUS* folder are mounted in the container, any change you make in the docker are going to be mirrored on your host ! Therefore, all actions related to git can still be done outside the docker. However, the building happens inside the docker to containerize all the dependencies.
+
+**IMPORTANT**: When you are working inside the docker with DevContainer, all your local VSCode extensions are not directly installed in the container. You need to install them manually once, and then VSCode should remember you configs in a .json. Feel free to install your favorite/needed extensions in the container (Like C/C++, Cmake tools, etc.). To view the file holding your configs, **Ctrl+Shift+P**, then type **Dev Containers: Open attached container configuration file**. Next time you'll attach the arcus container, the configs specified in that file are going to execute automatically. Here's an example of what you could want as a config file:
+```
+{
+	"extensions": [
+		"github.copilot",
+		"github.copilot-chat",
+		"github.vscode-github-actions",
+		"ms-azuretools.vscode-containers",
+		"ms-python.debugpy",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-python.vscode-python-envs",
+		"ms-vscode.cmake-tools",
+		"ms-vscode.cpptools",
+		"ms-vscode.cpptools-extension-pack",
+		"ms-vscode.cpptools-themes",
+		"twxs.cmake"
+	],
+	"workspaceFolder": "/sim_ws/src/arcus",
+}
+```
+**IMPORTANT**: To have VSCode C++ intellisense seeing ROS2 related headers and other dependencies, you need to add the correct include path to the **c_pp_properties.json** file in the **.vscode** folder. To create/view this file from the command palette, **Ctrl+Shift+P**, then type **C/C++: Edit Configuration (JSON)**.  For ROS2 related headers, the include path to specify is `"/opt/ros/humble/include/**"`.
