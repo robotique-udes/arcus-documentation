@@ -79,8 +79,8 @@ b() {
     docker exec -it "$CONTAINER_NAME" bash -c '
         source /opt/ros/humble/setup.bash
         cd /sim_ws || exit
-        colcon build '"$*"'
-        source install/setup.bash
+        colcon build '"$*"' -- symlink-install
+        source install/local_setup.bash
     '
 }
 ```
