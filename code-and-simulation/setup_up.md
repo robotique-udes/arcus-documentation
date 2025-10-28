@@ -117,7 +117,7 @@ groups
 You should see docker in the groups !
 - Give permission to the entrypoint.sh script:
 ```bash
-chmod +x ~arcus-simulation/sim_ws/src/scripts/entrypoint.sh
+chmod +x ~/arcus-simulation/sim_ws/src/scripts/entrypoint.sh
 ```
 - Build the docker container:
 ```bash
