@@ -6,6 +6,7 @@ Pure pursuit is a very popular control algorithm allowing robots to follow a giv
 
 In our case, the brief I/O for our pure pursuit node:
 - Input: CSV file containing waypoints for the wanted raceline (the waypoints in the CSV must be ordered in the correct way, meaning the way the car is expected to go). The file path is `arcus/resources/waypoints.csv`.
+- Input: The accurate position of the car.
 
 - Output: The computed steering angle that the car should take to catch up on its raceline on the given lookahead distance.
 
