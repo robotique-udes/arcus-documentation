@@ -65,9 +65,9 @@ gedit ~/.bashrc
 - At the top of the file, copy:
 ```
 # Additions
-alias arcus-build='xhost +local:docker && cd ~/arcus-simulation/sim_ws && docker-compose build'
-alias arcus-up='cd ~/arcus-simulation/sim_ws && docker-compose up -d'
-alias arcus-down='cd ~/arcus-simulation/sim_ws && docker-compose down'
+alias arcus-build='xhost +local:docker && cd ~/arcus-simulation/sim_ws && docker compose build'
+alias arcus-up='cd ~/arcus-simulation/sim_ws && docker compose up -d'
+alias arcus-down='cd ~/arcus-simulation/sim_ws && docker compose down'
 alias arcus-bash='docker exec -it arcus bash'
 alias arcus-nuke='docker system prune -a --volumes'
 alias arcus-space='docker system df'
