@@ -1,5 +1,4 @@
 # SLAM
-
 **Simultaneous Localization and Mapping (SLAM)** is the process by which a robot builds a map of an unknown environment while simultaneously determining its position within that map.
 
 In our application, SLAM is primarily used to generate an initial map during the robot’s first laps. This map is later utilized by the **Adaptive Monte Carlo Localization (AMCL)** algorithm (our particle filter) to accurately localize the robot within the environment.
@@ -30,7 +29,11 @@ ros2 launch f1tenth_gym_ros gym_bridge_launch.py
 To visualize the map being generated, switch the map topic within RVIZ to slam_map:
 ![switching map topic](../ressources/slam_rviz.png)
 
-Then you need to teleoperate the car to generate the map. The more laps you do, the better the map (more loop closures, see matlab vid).
+Then you need to teleoperate the car to generate the map, write this in another terminal:
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+The more laps you do, the better the map (more loop closures, see matlab vid).
 Once you are happy with the map and want to save it, you need to run our slam_map_saver node in another terminal:
 ```bash
 ros2 run slam_map_saver slam_map_saver
