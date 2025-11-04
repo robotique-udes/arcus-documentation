@@ -8,3 +8,6 @@
 ## Code & Simulation
 - [Programming Standards](code-and-simulation/programming-standards.md)
 - [SLAM](code-and-simulation/slam.md)
+- [EKF](code-and-simulation/ekf.md)
+- [Particle Filter](code-and-simulation/particle-filter.md)
+- [Pure pursuit](code-and-simulation/pure_pursuit.md)
