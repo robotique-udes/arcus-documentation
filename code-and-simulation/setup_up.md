@@ -72,17 +72,6 @@ alias arcus-bash='docker exec -it arcus bash'
 alias arcus-nuke='docker system prune -a --volumes'
 alias arcus-space='docker system df'
 alias arcus-list='docker ps'
-export RCUTILS_COLORIZED_OUTPUT=1
-
-b() {
-    CONTAINER_NAME="arcus"
-    docker exec -it "$CONTAINER_NAME" bash -c '
-        source /opt/ros/humble/setup.bash
-        cd /sim_ws || exit
-        colcon build '"$*"' -- symlink-install
-        source install/local_setup.bash
-    '
-}
 ```
 - Here's an important overview of what each macros and function mean:
 1. *arcus-build* : this command will build the *arcus* docker container.
