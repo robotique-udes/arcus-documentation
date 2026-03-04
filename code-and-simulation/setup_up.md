@@ -83,6 +83,22 @@ alias arcus-list='docker ps'
 7. *arcus-list* : this command will give you the list of the dockers running on your host machine.
 8. b : this function handles the building of all the ROS2 packages using *colcon build*. **IMPORTANT: You can run it from anywhere on your HOST terminal. Meaning you can't use the 'b' command from a docker bash session. The function handles it by going in the docker itself.**
 
+IMPORTANT: Recently, our team had to change DDS implementation from Fast DDS to Cyclone DDS. However, Cyclone DDS may have more trouble getting the right network interface, so you need to specify it manually.
+
+First, you'll need to find the name of the network interface being used to handle ROS2 communications (via DDS). To do so:
+```bash
+ip a
+```
+You should then have a list of all of your network interfaces. Get the name of the one being used for ROS2 (ex: wlp0s20f3).
+Then,  add and set the correct variable in your bashrc:
+```bash
+sudo gedit ~/.bashrc
+```
+Copy the following line under the ROS_DOMAIN_ID variable (with your network interface name):
+```bash
+export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces><NetworkInterface name="YOUR NETWORK INTERFACE NAME"/></Interfaces></General></Domain></CycloneDDS>'
+```
+
 ## 2.3 Building and running the docker
  First, you'll need to install docker and related packages: 
  - Installation: https://docs.docker.com/engine/install/ubuntu/
