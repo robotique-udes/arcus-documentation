@@ -11,3 +11,4 @@
 - [EKF](code-and-simulation/ekf.md)
 - [Particle Filter](code-and-simulation/particle-filter.md)
 - [Pure pursuit](code-and-simulation/pure_pursuit.md)
+- [Launch Car Packages](code-and-simulation/launch_car_packages.md)
