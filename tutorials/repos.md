@@ -12,8 +12,8 @@ This is the repo you are currently in right now! It is where we store important 
 
 ## [arcus-simulation](https://github.com/robotique-udes/arcus-simulation)
 
-TODO
+`arcus-simulation` contains code relating to the **RViz** simulation and the scripts that are only used on our local computers (not needed on the car/Jetson). For example, all of our GUI is in this repo.
 
 ## [arcus](https://github.com/robotique-udes/arcus)
 
-TODO
+`arcus` contains the core code located directly on the car (Jetson). It contains mostly our autonomous driving algorithms and nodes.
