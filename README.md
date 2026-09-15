@@ -5,6 +5,9 @@
 - [Setting up the containerized environment with f1tenth_gym for simulation](code-and-simulation/setup_up.md)
 - [Setting up the SSH key for GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
+## Tutorials
+Follow the [tutorials](tutorials/intro.md) to have a better idea of the ARCUS environnement and learn to use our tools.
+
 ## Code & Simulation
 - [Programming Standards](code-and-simulation/programming-standards.md)
 - [SLAM](code-and-simulation/slam.md)
