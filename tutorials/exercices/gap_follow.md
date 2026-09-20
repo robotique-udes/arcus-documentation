@@ -86,7 +86,7 @@ A function that determines the target heading inside the selected gap. Returns t
 
 A function that converts the array index into an actual steering angle and publishes an `AckermannDriveStamped` message.
 
-**Steering Formula**: $\text{steering\_angle} = \text{angle\_min} + (\text{target\_id} \times \text{angle\_increment})$
+**Steering Formula**: steering_angle = angle_min + target_id * angle_increment
 * Adjust speed dynamically: reduce velocity for sharp steering angles, increase velocity on straight paths.
 * `angle_min` and `angle_increment` are found in the LaserScan message.
 
