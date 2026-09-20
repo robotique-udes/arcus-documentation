@@ -37,3 +37,19 @@ This section helps to understand how we organise our tasks and objectives using 
 This section is a quick overview of our practices when it comes to Git/Github usage. It ensures that you follow good pratices when collaborating on ARCUS code.
 
 [Read about the Git/Github usage](git.md)
+
+### 4. Physical car communication
+
+In this section, you will learn how to comminucate with the physical car (Jetson). Wheter you want to add new code, test features or start racing, you will need to connect to the controller and understand how it works.
+
+[Read about the physical car communication](car_communication.md)
+
+## Our exercices
+
+We suggest a few exercices that you can try on your own to start putting your learning in practice. These are basic projects that combine many of our tools. For more in-detail exercices, we recommend to follow the official **Roboracer labs** mentionned earlier.
+
+### 1. Gap follow
+
+Gap follow is a simple reactive autonomous driving algorithm. This exercice will help you learn key ROS components.
+
+[Follow the gap follow exercice](exercices/gap_follow.md)
