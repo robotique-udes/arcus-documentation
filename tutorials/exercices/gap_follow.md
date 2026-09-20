@@ -92,7 +92,7 @@ A function that converts the array index into an actual steering angle and publi
 
 ## Test your code
 
-To test you code :
+To test your code :
 
 * Open a terminal to launch the simulation
 
