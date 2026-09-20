@@ -14,7 +14,7 @@ ros2 pkg create my_gap_follow
 
 ## Variables needed
 
-You need many variables in you node. They can be stored in the private section of you class (`.hpp` file).
+You need many variables in your node. They can be stored in the private section of your class (`.hpp` file).
 
 ### Strings
 
