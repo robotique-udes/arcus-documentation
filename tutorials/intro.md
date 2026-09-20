@@ -1,7 +1,7 @@
 # Introduction
 Welcome to ARCUS! In these tutorials, you will learn how to navigate through the different ARCUS repos, use our custom tools and even develop your own code.
 
-## Environnment setup
+## Environnement setup
 
 Before starting, make sure that you have the correct environnment setup. The detailed procedure for installation and configuration is available in the [**setup section**](../code-and-simulation/setup_up.md). Feel free to ask any of our members for help if needed!
 
