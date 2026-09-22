@@ -8,7 +8,7 @@ See the [system overview](overview.md) for how this node interacts with the rest
 
 The executable `master_node` launches as `/arcus/master_node`. Its arbitration loop runs at 50 Hz. If a controller heartbeat has not arrived for 300 ms, the master considers that source offline. Lower numeric priority values mean higher priority.
 
-The deadman switch and emergency braking always take precedence. If the path ahead becomes risky, or localization no longer agrees with the map, the master stops selecting pure pursuit and falls back to gap following. Track-zone instructions expire quickly so that a stale message cannot affect the car forever. Recognized algorithm names are `controller`, `safety`, `pure_pursuit`, and `disparity`.
+The deadman switch and emergency braking always take precedence. If the path ahead becomes risky, often because another car is occupying the intended line, or localization no longer agrees with the map, the master stops selecting pure pursuit and falls back to gap following. This fallback is most commonly used for overtaking: it looks for a nearby opening and steers into that safe gap. Track-zone instructions expire quickly so that a stale message cannot affect the car forever. Recognized algorithm names are `controller`, `safety`, `pure_pursuit`, and `disparity`.
 
 ## ROS interface
 

@@ -2,7 +2,7 @@
 
 See the [system overview](overview.md) for how this node interacts with the rest of Arcus.
 
-`gap_follow` drives using only the nearby lidar scan; it does not need a map or a waypoint path. It looks for open space in front of the car and steers toward the farthest safe direction. This makes it useful as a fallback when map-based driving is unsafe.
+`gap_follow` drives using only the nearby lidar scan; it does not need a map or a waypoint path. It looks for open space in front of the car and steers toward the farthest safe direction. In practice, it is most often used to overtake other cars: when the planned racing line is blocked, or when the pure-pursuit trajectory risk is high because there is a vehicle ahead, it finds a nearby safe gap and follows that opening instead.
 
 A *disparity* is a sudden jump between two neighboring lidar distances, which usually marks the edge of an obstacle. The node expands these edges by the car's clearance radius so that the selected opening is wide enough for the whole car.
 

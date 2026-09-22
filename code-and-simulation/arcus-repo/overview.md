@@ -47,7 +47,7 @@ The two autonomous driving algorithms do not publish directly to the car. They p
 | [`particle_filter`](../particle_filter/README.md) | Estimates where the car is on the saved map | Lidar, wheel odometry, map | Localized pose |
 | [`costmap_maker`](../costmap_maker/README.md) | Builds a short-range obstacle grid in front of the car | Lidar, pose, map | Local costmap and localization score |
 | [`pure_pursuit`](../pure_pursuit/README.md) | Follows the saved waypoint path | Pose, waypoints, local costmap | Drive suggestion and path risk |
-| [`gap_follow`](../gap_follow/README.md) | Steers through open lidar space without using the map | Lidar | Drive suggestion |
+| [`gap_follow`](../gap_follow/README.md) | Steers through open lidar space without using the map; commonly used to overtake other cars | Lidar | Drive suggestion |
 | [`track_zone_manager`](../track_zone_manager/README.md) | Applies instructions attached to regions of the track | Pose and zone CSV files | Speed limit and requested algorithm |
 | [`arcus_master`](../arcus_master/README.md) | Selects one safe command and sends it onward | All drive suggestions and safety signals | Final `/drive` command |
 
@@ -75,7 +75,7 @@ This cycle repeats continuously, allowing command selection to react to changes 
 | Main strength | Follows the intended racing line | Reacts to nearby open space |
 | Main weakness | Depends on good localization and waypoints | Does not know the intended global route |
 
-Pure pursuit is the normal path follower. Gap follow is valuable in sections explicitly configured for it and as a fallback when pure pursuit's planned path is risky or the localization/map agreement is poor.
+Pure pursuit is the normal path follower. Gap follow is valuable in sections explicitly configured for it and as a fallback when pure pursuit's planned path is risky or the localization/map agreement is poor. In practice, a high pure-pursuit trajectory risk is often because another car is present in the lane, so gap following is commonly used to overtake that vehicle.
 
 ## How `arcus_master` makes a decision
 

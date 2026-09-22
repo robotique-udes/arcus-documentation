@@ -12,7 +12,7 @@ Instead of steering directly at the closest waypoint, it selects a point farther
 - Default control rate: 38 Hz.
 - Publishes an `arcus_msgs/msg/ErrorCode` heartbeat every 50 ms.
 
-The node checks the chosen path against the local costmap and publishes a risk score. `arcus_master` can switch to gap following when that score is too high. If the car becomes stuck after moving, pure pursuit can briefly reverse to recover; its status message tells the master to preserve that recovery command.
+The node checks the chosen path against the local costmap and publishes a risk score. A high trajectory risk is often caused by another car occupying part of the intended path, and `arcus_master` can switch to gap following when that score is too high to overtake safely. If the car becomes stuck after moving, pure pursuit can briefly reverse to recover; its status message tells the master to preserve that recovery command.
 
 ## ROS interface
 
