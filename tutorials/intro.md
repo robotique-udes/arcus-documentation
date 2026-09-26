@@ -40,7 +40,7 @@ This section is a quick overview of our practices when it comes to Git/Github us
 
 ### 4. Physical car communication
 
-In this section, you will learn how to comminucate with the physical car (Jetson). Wheter you want to add new code, test features or start racing, you will need to connect to the controller and understand how it works.
+In this section, you will learn how to comminucate with the physical car (Jetson). Whether you want to add new code, test features or start racing, you will need to connect to the controller and understand how it works.
 
 [Read about the physical car communication](car_communication.md)
 
