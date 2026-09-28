@@ -20,7 +20,7 @@ The workflow to code the car for real-life racing revolves around 3 important as
 
 Our team decided to use docker to make life easier for everyone. A docker is a containerized environment on your host machine that has it's own set of dependencies.
 ## 2.2 Cloning the ARCUS repo
-The ARCUS repo, that you can find in the **Robotiques_udes github**, is the team's repo with all of our ROS2 packages. This is the core of our codebase, and chances are this is where you'll be coding the most.
+The ARCUS repo, that you can find in the [**Robotiques_udes github**](https://github.com/robotique-udes), is the team's repo with all of our ROS2 packages. This is the core of our codebase, and chances are this is where you'll be coding the most.
 - Make sure you're in your home directory:
 ```bash
 cd ~
