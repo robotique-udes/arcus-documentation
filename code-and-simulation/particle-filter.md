@@ -56,3 +56,7 @@ An initial pose can be supplied through `/initialpose`, usually with RViz's **2D
 - A larger `angle_step` reduces work and scan detail.
 - Output represents the lidar pose; `map`, `odom`, and `ego_racecar/laser` are fixed frame names in the implementation.
 - Visualization messages are produced only when `viz` is enabled and, where applicable, a subscriber exists.
+
+## Code analysis
+
+See [particle filter code analysis](particle-filter-analysis.md) for details about initialization, the update pipeline, sensor-model calculations, and potential areas for further investigation.
